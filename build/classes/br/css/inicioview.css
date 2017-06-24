@@ -1,0 +1,14 @@
+#background {
+    -fx-background-color: #D6DDEA;
+    
+}
+
+#btnMenu {
+    
+    -fx-background-color: transparent;
+    -fx-pref-height: 190;
+    -fx-pref-width:140;
+}
+
+
+

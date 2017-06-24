@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="820.0" styleClass="mainFxmlClass" stylesheets="@/br/css/cadastroview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.CadastroClienteViewController">
+   <children>
+      <GridPane id="borderPane" layoutX="21.0" layoutY="29.0" prefHeight="248.0" prefWidth="800.0" stylesheets="@../css/cadastroview.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="6.675266265869141" prefWidth="6.675266265869141" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="544.2807197570801" minWidth="10.0" prefWidth="405.4479675292969" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.8701171875" minWidth="6.25311279296875" prefWidth="14.642791748046875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.3572082519531" minWidth="10.0" prefWidth="339.3572082519531" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="59.87010955810547" minHeight="0.0" prefHeight="14.29226303100586" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="131.31228637695312" minHeight="10.0" prefHeight="60.798484802246094" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Pessoa Física">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton layoutX="166.0" layoutY="31.0" mnemonicParsing="false" text="Pessoa Jurídica">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Nome:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="348.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="106.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label text="N. Fantasia:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="314.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="37.0" layoutY="98.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Label text="CPF/CNPJ:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="249.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Tel. Celular:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="240.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <Label prefHeight="55.0" prefWidth="79.0" text="Tel. Com./Res.:" wrapText="true">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="240.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Label id="lblBg" contentDisplay="CENTER" layoutX="46.0" layoutY="26.0" prefHeight="28.0" prefWidth="172.0" stylesheets="@../css/cadastroview.css" text=" DADOS PESSOAIS" textAlignment="CENTER" textFill="#4a4a4a">
+         <font>
+            <Font name="Avenir Next Demi Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Label>
+      <GridPane id="borderPane" layoutX="20.0" layoutY="30.0" prefHeight="248.0" prefWidth="800.0" stylesheets="@../css/cadastroview.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="265.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="CEP:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="100.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="30.0" text="Logradouro:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField layoutX="52.0" layoutY="20.0" prefHeight="40.0" prefWidth="390.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="162.0" layoutY="30.0" text="N˚:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField layoutX="249.0" layoutY="20.0" prefHeight="40.0" prefWidth="52.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="UF:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox prefHeight="27.0" prefWidth="70.0" />
+                  <Label layoutX="10.0" layoutY="35.0" text="Cidade:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox layoutX="33.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
+                  <Label layoutX="183.0" layoutY="35.0" text="Bairro:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox layoutX="230.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="106.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Complemento:">
+                     <font>
+                        <Font name="Avenir Next Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="639.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="755.0" minWidth="10.0" prefWidth="745.16845703125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="59.87010955810547" minHeight="0.0" prefHeight="14.29226303100586" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="131.31228637695312" minHeight="10.0" prefHeight="60.798484802246094" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label id="lblBg" contentDisplay="CENTER" layoutX="46.0" layoutY="286.0" prefHeight="28.0" prefWidth="112.0" stylesheets="@../css/cadastroview.css" text=" ENDEREÇO" textAlignment="CENTER" textFill="#4a4a4a" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font name="Avenir Next Demi Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" layoutX="9.0" layoutY="517.0" prefHeight="70.0" prefWidth="820.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button id="btnSalvar" mnemonicParsing="false" stylesheets="@../css/cadastroview.css" text="SALVAR" />
+            <Button id="btnExcluir" mnemonicParsing="false" stylesheets="@../css/cadastroview.css" text="EXCLUIR">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

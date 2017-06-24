@@ -1,0 +1,48 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#AnchorPane {
+    
+    -fx-background-color:  #D6DDEA;
+}
+
+#borderPane {
+
+    -fx-content-display: top;
+    -fx-border-insets: 20 15 15 15;
+    -fx-border-color: #4A4A4A;
+
+}
+
+#lblBg {
+    
+    -fx-background-color:  #D6DDEA;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#btnSalvar {
+    
+    -fx-background-color: #388E3C;
+    -fx-font-family:"Avenir Next";
+    -fx-font-size: 18px;
+    -fx-pref-height: 20;
+    -fx-pref-width:150;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#btnExcluir {
+    
+    -fx-background-color: #B71C1C;
+    -fx-font-family:"Avenir Next";
+    -fx-font-size: 18px;
+    -fx-pref-height: 20;
+    -fx-pref-width:150;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+}
+

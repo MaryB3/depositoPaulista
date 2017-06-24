@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.InicioViewController">
+   <children>
+      <BorderPane id="background" layoutX="-1.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/inicioview.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox id="background" alignment="CENTER" prefHeight="130.0" prefWidth="823.0" spacing="30.0" stylesheets="@../css/inicioview.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="btnMenu" fx:id="btnCadastrarCliente" mnemonicParsing="false" onAction="#btnCadastrarClientePressed" stylesheets="@../css/inicioview.css">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding></Button>
+                  <Button id="btnMenu" fx:id="btnClientes" mnemonicParsing="false" stylesheets="@../css/inicioview.css">
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding></Button>
+                  <Button id="btnMenu" fx:id="btnCadastrarProduto" mnemonicParsing="false" onAction="#btnCadastrarProdutoPressed" stylesheets="@../css/inicioview.css">
+                     <padding>
+                        <Insets top="3.0" />
+                     </padding></Button>
+                  <Button id="btnMenu" fx:id="btnProdutos" mnemonicParsing="false" stylesheets="@../css/inicioview.css">
+                     <padding>
+                        <Insets bottom="7.0" />
+                     </padding></Button>
+                  <Button id="btnMenu" fx:id="btnFazerPedido" mnemonicParsing="false" onAction="#btnFazerPedidoPressed" stylesheets="@../css/inicioview.css">
+                     <padding>
+                        <Insets top="3.0" />
+                     </padding></Button>
+                  <Button id="btnMenu" fx:id="btnPedidos" mnemonicParsing="false" stylesheets="@../css/inicioview.css">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding></Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+            <VBox alignment="CENTER" prefHeight="138.0" prefWidth="823.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="DEPÓSITO PAULISTA" textFill="#42649f">
+                     <font>
+                        <Font name="Avenir Next Regular" size="56.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
