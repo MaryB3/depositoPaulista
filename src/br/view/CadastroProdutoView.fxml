@@ -29,7 +29,7 @@
                   <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
                </font>
             </Label>
-            <TextField prefHeight="40.0" prefWidth="404.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="nomeTxt" prefHeight="40.0" prefWidth="404.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="Avenir Next Regular" size="13.0" />
                </font>
@@ -42,14 +42,19 @@
                   <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="114.0" layoutY="53.0" prefHeight="40.0" prefWidth="230.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <TextField fx:id="valorTxt" layoutX="114.0" layoutY="53.0" prefHeight="40.0" prefWidth="230.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="Avenir Next Regular" size="13.0" />
                </font>
                <GridPane.margin>
-                  <Insets right="300.0" />
+                  <Insets left="20.0" right="290.0" />
                </GridPane.margin>
             </TextField>
+            <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="23.0" text="R$" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
       <Label id="lblBg" contentDisplay="CENTER" layoutX="56.0" layoutY="36.0" prefHeight="28.0" prefWidth="202.0" stylesheets="@../css/cadastroview.css" text=" DADOS DO PRODUTO" textAlignment="CENTER" textFill="#4a4a4a" AnchorPane.topAnchor="35.0">
@@ -62,8 +67,8 @@
       </Label>
       <HBox alignment="CENTER_RIGHT" layoutX="19.0" layoutY="527.0" prefHeight="70.0" prefWidth="543.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button id="btnSalvar" mnemonicParsing="false" stylesheets="@../css/cadastroview.css" text="SALVAR" />
-            <Button id="btnExcluir" mnemonicParsing="false" stylesheets="@../css/cadastroview.css" text="EXCLUIR">
+            <Button id="btnSalvar" mnemonicParsing="false" onAction="#btnSalvarPressed" stylesheets="@../css/cadastroview.css" text="SALVAR" />
+            <Button id="btnExcluir" mnemonicParsing="false" onAction="#btnExcluirPressed" stylesheets="@../css/cadastroview.css" text="EXCLUIR">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>

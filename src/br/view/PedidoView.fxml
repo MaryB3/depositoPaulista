@@ -8,8 +8,9 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import util.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.controller.PedidoViewController">
+<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.PedidoViewController">
     <stylesheets>
         <URL value="@/br/css/pedidoview.css" />
     </stylesheets>
@@ -31,7 +32,7 @@
                   <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
                </font>
             </Label>
-            <ComboBox prefHeight="35.0" prefWidth="498.0" GridPane.columnIndex="2" />
+            <ComboBox fx:id="comboBoxCliente" prefHeight="35.0" prefWidth="498.0" promptText="Selecione..." GridPane.columnIndex="2" />
             <Label text="Produto:" GridPane.rowIndex="1">
                <font>
                   <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
@@ -39,7 +40,7 @@
             </Label>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <ComboBox prefHeight="35.0" prefWidth="336.0" />
+                  <ComboBox fx:id="comboBoxProduto" prefHeight="35.0" prefWidth="336.0" promptText="Selecione..." />
                   <Label text="Data:">
                      <font>
                         <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
@@ -48,7 +49,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="35.0" prefWidth="92.0">
+                  <TextField fx:id="dataTxt" prefHeight="35.0" prefWidth="92.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -62,15 +63,15 @@
             </Label>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <TextField prefHeight="35.0" prefWidth="92.0">
+                  <MaskTextField fx:id="qtdTxt" prefHeight="35.0" prefWidth="92.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
-                  </TextField>
-                  <ComboBox prefHeight="35.0" prefWidth="60.0" />
-                  <Button id="btnAddPedido" fx:id="btnAddProduto" mnemonicParsing="false" stylesheets="@../css/pedidoview.css">
+                  </MaskTextField>
+                  <ComboBox fx:id="comboBoxTipo" prefHeight="35.0" prefWidth="110.0" promptText="Selecione" />
+                  <Button id="btnAddPedido" fx:id="btnAddProduto" maxHeight="41.0" maxWidth="41.0" minHeight="41.0" minWidth="41.0" mnemonicParsing="false" stylesheets="@../css/pedidoview.css">
                      <HBox.margin>
-                        <Insets left="170.0" />
+                        <Insets left="130.0" />
                      </HBox.margin>
                   </Button>
                   <Label text="Adicionar Produto">
@@ -82,7 +83,7 @@
             </HBox>
          </children>
       </GridPane>
-      <TableView layoutX="43.0" layoutY="192.0" prefHeight="200.0" prefWidth="570.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <TableView fx:id="produtosTableView" layoutX="43.0" layoutY="192.0" prefHeight="200.0" prefWidth="570.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
         <columns>
           <TableColumn prefWidth="60.0" text="CÓD." />
           <TableColumn prefWidth="312.0" text="PRODUTO" />
@@ -96,6 +97,6 @@
             <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
          </font>
       </Label>
-      <Button id="btnPreVizualizar" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="437.0" mnemonicParsing="false" stylesheets="@../css/pedidoview.css" text="PRÉ-VISUALIZAR" />
+      <Button id="btnPreVizualizar" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnPreVizualizarPressed" stylesheets="@../css/pedidoview.css" text="PRÉ-VISUALIZAR" />
    </children>
 </AnchorPane>

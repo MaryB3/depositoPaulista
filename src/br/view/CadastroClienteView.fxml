@@ -9,6 +9,8 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import util.*?>
+
 
 <AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="820.0" styleClass="mainFxmlClass" stylesheets="@/br/css/cadastroview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.CadastroClienteViewController">
    <children>
@@ -28,12 +30,12 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <RadioButton mnemonicParsing="false" text="Pessoa Física">
+                  <RadioButton fx:id="radioButtonPessoaF" mnemonicParsing="false" onAction="#radioButtonPF" text="Pessoa Física">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton layoutX="166.0" layoutY="31.0" mnemonicParsing="false" text="Pessoa Jurídica">
+                  <RadioButton fx:id="radioButtonPessoaJ" layoutX="166.0" layoutY="31.0" mnemonicParsing="false" onAction="#radioButtonPJ" text="Pessoa Jurídica">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
@@ -47,7 +49,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="348.0">
+                  <TextField fx:id="nomeTxt" prefHeight="40.0" prefWidth="348.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -61,7 +63,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="314.0">
+                  <TextField fx:id="nomeFantasiaTxt" prefHeight="40.0" prefWidth="314.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -75,11 +77,11 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="249.0">
+                  <MaskTextField fx:id="documentoTxt" prefHeight="40.0" prefWidth="249.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
-                  </TextField>
+                  </MaskTextField>
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
@@ -89,11 +91,11 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="240.0">
+                  <MaskTextField fx:id="telCelularTxt" prefHeight="40.0" prefWidth="240.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
-                  </TextField>
+                  </MaskTextField>
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
@@ -103,11 +105,11 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="240.0">
+                  <MaskTextField fx:id="telResidencialTxt" prefHeight="40.0" prefWidth="240.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
-                  </TextField>
+                  </MaskTextField>
                </children>
             </HBox>
          </children>
@@ -129,11 +131,11 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="100.0">
+                  <MaskTextField fx:id="cepTxt" prefHeight="40.0" prefWidth="100.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
-                  </TextField>
+                  </MaskTextField>
                   <Label layoutX="10.0" layoutY="30.0" text="Logradouro:">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
@@ -142,7 +144,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField layoutX="52.0" layoutY="20.0" prefHeight="40.0" prefWidth="390.0">
+                  <TextField fx:id="logradouroTxt" layoutX="52.0" layoutY="20.0" prefHeight="40.0" prefWidth="390.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -155,11 +157,11 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField layoutX="249.0" layoutY="20.0" prefHeight="40.0" prefWidth="52.0">
+                  <MaskTextField fx:id="numeroTxt" layoutX="249.0" layoutY="20.0" prefHeight="40.0" prefWidth="52.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
-                  </TextField>
+                  </MaskTextField>
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -169,7 +171,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <ComboBox prefHeight="27.0" prefWidth="70.0" />
+                  <ComboBox fx:id="comboBoxUF" prefHeight="27.0" prefWidth="70.0" />
                   <Label layoutX="10.0" layoutY="35.0" text="Cidade:">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
@@ -178,7 +180,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox layoutX="33.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
+                  <ComboBox fx:id="comboBoxCidade" layoutX="33.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
                   <Label layoutX="183.0" layoutY="35.0" text="Bairro:">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
@@ -187,7 +189,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox layoutX="230.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
+                  <ComboBox fx:id="comboBoxBairro" layoutX="230.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="106.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -197,7 +199,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="40.0" prefWidth="639.0">
+                  <TextField fx:id="complementoTxt" prefHeight="40.0" prefWidth="639.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -224,8 +226,8 @@
       </Label>
       <HBox alignment="CENTER_RIGHT" layoutX="9.0" layoutY="517.0" prefHeight="70.0" prefWidth="820.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button id="btnSalvar" mnemonicParsing="false" stylesheets="@../css/cadastroview.css" text="SALVAR" />
-            <Button id="btnExcluir" mnemonicParsing="false" stylesheets="@../css/cadastroview.css" text="EXCLUIR">
+            <Button id="btnSalvar" mnemonicParsing="false" onAction="#btnSalvarPressed" stylesheets="@../css/cadastroview.css" text="SALVAR" />
+            <Button id="btnExcluir" mnemonicParsing="false" onAction="#btnExcluirPressed" stylesheets="@../css/cadastroview.css" text="EXCLUIR">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
