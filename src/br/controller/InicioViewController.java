@@ -63,8 +63,20 @@ public class InicioViewController implements Initializable {
         Scene scene = new Scene(root);
         stage.setTitle("CADASTRO DE CLIENTE");
         stage.setScene(scene);
-        stage.showAndWait();
+        stage.show();
 
+    }
+    
+    @FXML
+    public void btnClientesPressed() throws IOException {
+        
+        Parent root = FXMLLoader.load(getClass().getResource("/br/view/ClientesView.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setTitle("CLIENTES");
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
     @FXML
@@ -80,14 +92,38 @@ public class InicioViewController implements Initializable {
     }
     
     @FXML
+    public void btnProdutosPressed() throws IOException {
+        
+        Parent root = FXMLLoader.load(getClass().getResource("/br/view/ProdutosView.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setTitle("PRODUTOS");
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+    
+    @FXML
     public void btnFazerPedidoPressed() throws IOException {
         
         Parent root = FXMLLoader.load(getClass().getResource("/br/view/PedidoView.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
-        stage.setTitle("Pedido");
+        stage.setTitle("PEDIDO");
         stage.setScene(scene);
         stage.show();
+    }
+    
+    @FXML
+    public void btnPedidosPressed() throws IOException {
+        
+        Parent root = FXMLLoader.load(getClass().getResource("/br/view/HistoricoPedidosView.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setTitle("HISTÓRICO DE PEDIDOS");
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
 }

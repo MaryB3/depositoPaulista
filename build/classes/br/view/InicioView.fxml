@@ -21,7 +21,7 @@
                      <padding>
                         <Insets bottom="5.0" />
                      </padding></Button>
-                  <Button id="btnMenu" fx:id="btnClientes" mnemonicParsing="false" stylesheets="@../css/inicioview.css">
+                  <Button id="btnMenu" fx:id="btnClientes" mnemonicParsing="false" onAction="#btnClientesPressed" stylesheets="@../css/inicioview.css">
                      <padding>
                         <Insets top="2.0" />
                      </padding></Button>
@@ -29,7 +29,7 @@
                      <padding>
                         <Insets top="3.0" />
                      </padding></Button>
-                  <Button id="btnMenu" fx:id="btnProdutos" mnemonicParsing="false" stylesheets="@../css/inicioview.css">
+                  <Button id="btnMenu" fx:id="btnProdutos" mnemonicParsing="false" onAction="#btnProdutosPressed" stylesheets="@../css/inicioview.css">
                      <padding>
                         <Insets bottom="7.0" />
                      </padding></Button>
@@ -37,7 +37,7 @@
                      <padding>
                         <Insets top="3.0" />
                      </padding></Button>
-                  <Button id="btnMenu" fx:id="btnPedidos" mnemonicParsing="false" stylesheets="@../css/inicioview.css">
+                  <Button id="btnMenu" fx:id="btnPedidos" mnemonicParsing="false" onAction="#btnPedidosPressed" stylesheets="@../css/inicioview.css">
                      <padding>
                         <Insets top="5.0" />
                      </padding></Button>

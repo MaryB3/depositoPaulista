@@ -65,6 +65,12 @@ public class PedidoViewController implements Initializable {
     }
     
     @FXML
+    public void btnAddProdutoPressed() throws IOException {
+        
+        
+    }
+    
+    @FXML
     public void maskTxtField(TextField txtField) {
         
         txtField.lengthProperty().addListener((ObservableValue<? extends Number> observableValue, Number number, Number number2) -> {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.controller.ClientesViewController">
+    <stylesheets>
+        <URL value="@/br/css/clientesview.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="237.0" layoutY="55.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="nomeTxt" prefHeight="30.0" prefWidth="335.0" promptText="Buscar por nome...">
+                     <font>
+                        <Font name="Avenir Next Regular" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button id="btnBuscar" mnemonicParsing="false" onAction="#btnBuscarPressed" stylesheets="@../css/clientesview.css" text="BUSCAR" />
+               </children>
+            </HBox>
+            <TableView fx:id="clientesTableView" prefHeight="320.0" prefWidth="600.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="CÓD." />
+                <TableColumn prefWidth="373.0" text="NOME" />
+                  <TableColumn prefWidth="141.0" text="CPF/CNPJ" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
