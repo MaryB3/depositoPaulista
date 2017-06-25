@@ -2,6 +2,19 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
+#AnchorPane{
+
+    -fx-background-color: #D6DDEA;
+}
+
+#btnBuscar {
+
+    -fx-background-color: #3F51B5;
+    -fx-font-family:"Avenir Next";
+    -fx-font-size: 12px;
+    -fx-pref-height: 30;
+    -fx-pref-width:70;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 
 }

@@ -16,6 +16,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import util.MaskTextField;
@@ -37,7 +38,8 @@ public class PedidoViewController implements Initializable {
     @FXML private MaskTextField qtdTxt;
     @FXML private ComboBox comboBoxTipo;
     @FXML private TableView produtosTableView;
-    
+    @FXML private Label totalLbl;
+    //ESSA LABEL COLOCAR totalLbl.setText("TOTAL: " + somaDeTodosSubTotais)
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

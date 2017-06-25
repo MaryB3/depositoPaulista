@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,8 +9,35 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.HistoricoPedidosViewController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.controller.HistoricoPedidosViewController">
     <stylesheets>
-        <URL value="@/br/css/historicopedidosview.css"/>
+        <URL value="@/br/css/historicopedidosview.css" />
     </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="257.0" layoutY="75.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="clienteTxt" prefHeight="30.0" prefWidth="335.0" promptText="Buscar por cliente...">
+                     <font>
+                        <Font name="Avenir Next Regular" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button id="btnBuscar" mnemonicParsing="false" onAction="#btnBuscarPressed" stylesheets="@../css/historicopedidosview.css" text="BUSCAR" />
+               </children>
+            </HBox>
+            <TableView fx:id="pedidosTableView" prefHeight="320.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="CÓD." />
+                  <TableColumn prefWidth="335.0" text="CLIENTE" />
+                  <TableColumn prefWidth="81.0" text="DATA" />
+                  <TableColumn prefWidth="98.0" text="VALOR" />
+               </columns>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

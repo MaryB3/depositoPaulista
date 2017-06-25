@@ -92,7 +92,7 @@
             <TableColumn prefWidth="82.0" text="SUB-TOTAL" />
         </columns>
       </TableView>
-      <Label id="bgLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="392.0" prefHeight="17.0" prefWidth="570.0" stylesheets="@../css/pedidoview.css" text="TOTAL: ">
+      <Label id="bgLbl" fx:id="totalLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="392.0" prefHeight="17.0" prefWidth="570.0" stylesheets="@../css/pedidoview.css" text="TOTAL: ">
          <font>
             <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
          </font>
