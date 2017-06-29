@@ -42,19 +42,28 @@
                   <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="valorTxt" layoutX="114.0" layoutY="53.0" prefHeight="40.0" prefWidth="230.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <font>
-                  <Font name="Avenir Next Regular" size="13.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="20.0" right="290.0" />
-               </GridPane.margin>
-            </TextField>
-            <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="23.0" text="R$" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <font>
-                  <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
-               </font>
-            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="23.0" text="R$">
+                     <font>
+                        <Font name="Avenir Next Condensed Demi Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="valorTxt" prefHeight="40.0" prefWidth="110.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="tipoComboBox" prefHeight="40.0" prefWidth="119.0" promptText="Selecione...">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
          </children>
       </GridPane>
       <Label id="lblBg" contentDisplay="CENTER" layoutX="56.0" layoutY="36.0" prefHeight="28.0" prefWidth="202.0" stylesheets="@../css/cadastroview.css" text=" DADOS DO PRODUTO" textAlignment="CENTER" textFill="#4a4a4a" AnchorPane.topAnchor="35.0">

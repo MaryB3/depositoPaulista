@@ -11,15 +11,14 @@
 <?import javafx.scene.layout.*?>
 <?import util.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="820.0" styleClass="mainFxmlClass" stylesheets="@/br/css/cadastroview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.CadastroClienteViewController">
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="1100.0" styleClass="mainFxmlClass" stylesheets="@/br/css/cadastroview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controller.CadastroClienteViewController">
    <children>
       <GridPane id="borderPane" layoutX="21.0" layoutY="29.0" prefHeight="248.0" prefWidth="800.0" stylesheets="@../css/cadastroview.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="6.675266265869141" prefWidth="6.675266265869141" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="544.2807197570801" minWidth="10.0" prefWidth="405.4479675292969" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.8701171875" minWidth="6.25311279296875" prefWidth="14.642791748046875" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.3572082519531" minWidth="10.0" prefWidth="339.3572082519531" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="629.0" minWidth="10.0" prefWidth="629.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.8701171875" minWidth="6.25311279296875" prefWidth="33.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="372.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="59.87010955810547" minHeight="0.0" prefHeight="14.29226303100586" vgrow="SOMETIMES" />
@@ -49,7 +48,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nomeTxt" prefHeight="40.0" prefWidth="348.0">
+                  <TextField fx:id="nomeTxt" prefHeight="40.0" prefWidth="574.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -63,7 +62,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nomeFantasiaTxt" prefHeight="40.0" prefWidth="314.0">
+                  <TextField fx:id="nomeFantasiaTxt" prefHeight="40.0" prefWidth="542.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -144,7 +143,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="logradouroTxt" layoutX="52.0" layoutY="20.0" prefHeight="40.0" prefWidth="390.0">
+                  <TextField fx:id="logradouroTxt" layoutX="52.0" layoutY="20.0" prefHeight="40.0" prefWidth="630.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -171,7 +170,11 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="comboBoxUF" prefHeight="27.0" prefWidth="70.0" />
+                  <TextField fx:id="ufTxt" prefHeight="40.0" prefWidth="220.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
                   <Label layoutX="10.0" layoutY="35.0" text="Cidade:">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
@@ -180,7 +183,11 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="comboBoxCidade" layoutX="33.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
+                  <TextField fx:id="cidadeTxt" layoutX="43.0" layoutY="25.0" prefHeight="40.0" prefWidth="300.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
                   <Label layoutX="183.0" layoutY="35.0" text="Bairro:">
                      <font>
                         <Font name="Avenir Next Demi Bold" size="14.0" />
@@ -189,7 +196,11 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="comboBoxBairro" layoutX="230.0" layoutY="32.0" prefHeight="27.0" prefWidth="230.0" />
+                  <TextField fx:id="bairroTxt" layoutX="299.0" layoutY="25.0" prefHeight="40.0" prefWidth="290.0">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </TextField>
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="106.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -199,7 +210,7 @@
                         <Font name="Avenir Next Demi Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="complementoTxt" prefHeight="40.0" prefWidth="639.0">
+                  <TextField fx:id="complementoTxt" prefHeight="40.0" prefWidth="916.0">
                      <font>
                         <Font name="Avenir Next Regular" size="13.0" />
                      </font>
@@ -209,13 +220,13 @@
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="755.0" minWidth="10.0" prefWidth="745.16845703125" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1025.0" minWidth="10.0" prefWidth="1025.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="0.0" prefWidth="0.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="59.87010955810547" minHeight="0.0" prefHeight="14.29226303100586" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="131.31228637695312" minHeight="10.0" prefHeight="60.798484802246094" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="131.31228637695312" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="68.31658935546875" prefHeight="70.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>

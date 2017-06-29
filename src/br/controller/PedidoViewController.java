@@ -32,13 +32,14 @@ public class PedidoViewController implements Initializable {
      * Initializes the controller class.
      */
     
-    @FXML private ComboBox comboBoxCliente;
-    @FXML private ComboBox comboBoxProduto;
+    @FXML private TextField clienteTxt;
     @FXML private TextField dataTxt;
     @FXML private MaskTextField qtdTxt;
     @FXML private ComboBox comboBoxTipo;
     @FXML private TableView produtosTableView;
     @FXML private Label totalLbl;
+    
+    @FXML private TableView tableView;
     //ESSA LABEL COLOCAR totalLbl.setText("TOTAL: " + somaDeTodosSubTotais)
     
     @Override
@@ -46,6 +47,8 @@ public class PedidoViewController implements Initializable {
         // TODO
         maskTxtField(dataTxt);
         qtdTxt.setMask("N!");
+        qtdTxt.setMinWidth(80);
+        qtdTxt.setMaxWidth(80);
         
         List<String> tipos= new ArrayList<>();
         tipos.add("Kg");
@@ -62,6 +65,12 @@ public class PedidoViewController implements Initializable {
     
     @FXML
     public void btnPreVizualizarPressed() throws IOException {
+        
+        
+    }
+    
+    @FXML
+    public void btnImprimirPressed() throws IOException {
         
         
     }

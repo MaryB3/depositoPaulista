@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.controller.PedidoViewController">
+    <stylesheets>
+        <URL value="@/br/css/pedidoview.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableView" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn prefWidth="64.0" text="CÓDIGO" />
+          <TableColumn prefWidth="403.0" text="NOME" />
+            <TableColumn prefWidth="132.0" text="DOCUMENTO" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

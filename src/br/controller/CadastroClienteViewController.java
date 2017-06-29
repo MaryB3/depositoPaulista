@@ -35,13 +35,13 @@ public class CadastroClienteViewController implements Initializable {
     @FXML private TextField nomeFantasiaTxt;
     @FXML private MaskTextField documentoTxt;
     @FXML private MaskTextField telCelularTxt;
-    @FXML private MaskTextField telResidencialTxt;
+    @FXML private MaskTextField telResidencialTxt;  
     @FXML private MaskTextField cepTxt;
     @FXML private TextField logradouroTxt;
     @FXML private MaskTextField numeroTxt;
-    @FXML private ComboBox comboBoxUF;
-    @FXML private ComboBox comboBoxCidade;
-    @FXML private ComboBox comboBoxBairro;       
+    @FXML private TextField ufTxt;
+    @FXML private TextField cidadeTxt;
+    @FXML private TextField bairroTxt;
     @FXML private TextField complementoTxt;       
             
 
@@ -50,13 +50,23 @@ public class CadastroClienteViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         documentoTxt.setMask("N!.N!.N!-N!");
+        documentoTxt.setMaxWidth(270);
+        documentoTxt.setMinWidth(270);
         maskTxtField(documentoTxt);
         cepTxt.setMask("N!-N!");
+        numeroTxt.setMask("N!");
+        numeroTxt.setMaxWidth(85);
+        numeroTxt.setMinWidth(85);
         maskTxtField(cepTxt);
         //telCelularTxt.setMask("(NN)NNNNN-NNNN!");
         maskTxtField(telCelularTxt);
+        telCelularTxt.setMaxWidth(265);
+        telCelularTxt.setMinWidth(265);
         //telResidencialTxt.setMask("(NN)NNNN-NNNN!");
         maskTxtField(telResidencialTxt);
+        telResidencialTxt.setMaxWidth(265);
+        telResidencialTxt.setMinWidth(265);
+        
     } 
     
     @FXML

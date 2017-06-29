@@ -32,3 +32,15 @@
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
+
+#btnImprimir {
+    
+     -fx-background-color: #FFFFFF;
+    -fx-font-family:"Avenir Next";
+    -fx-font-size: 14px;
+    -fx-pref-height: 20;
+    -fx-pref-width:80;
+    -fx-text-fill: #3F51B5;
+    -fx-font-weight: bold;
+    
+}
